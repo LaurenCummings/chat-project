@@ -7,15 +7,19 @@ import SettingsPage from "./pages/SettingsPage";
 import ProfilePage from "./pages/ProfilePage";
 import { useAuthStore } from "./store/useAuthStore";
 import { useEffect } from "react";
+import { Loader } from "lucide-react";
 
 const App = () => {
-  const { authUser, checkAuth } = useAuthStore();
+  const { authUser, checkAuth, isCheckingAuth } = useAuthStore();
 
   useEffect(() => {
     checkAuth();
   }, [checkAuth]);
 
   console.log({ authUser });
+
+  if (isCheckingAuth && !authUser)
+    return <Loader className="size-10 animate-spin" />;
 
   return (
     <div>
