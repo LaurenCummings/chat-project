@@ -1,1 +1,5 @@
-{}
+{
+  "devDependencies": {
+    "daisyui": "^4.12.23"
+  }
+}
