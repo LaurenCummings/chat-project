@@ -1,6 +1,14 @@
 import { useState } from "react";
 import { useAuthStore } from "../store/useAuthStore";
-import { Mail, MessageSquare, User, Eye, EyeOff, Lock } from "lucide-react";
+import {
+  Mail,
+  MessageSquare,
+  User,
+  Eye,
+  EyeOff,
+  Lock,
+  Loader2,
+} from "lucide-react";
 
 const SignUpPage = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -104,6 +112,21 @@ const SignUpPage = () => {
                 </button>
               </div>
             </div>
+
+            <button
+              type="submit"
+              className="btn btn-primary w-full"
+              disabled={isSigningUp}
+            >
+              {isSigningUp ? (
+                <>
+                  <Loader2 className="size-5 animate-spin" />
+                  Loading...
+                </>
+              ) : (
+                "Create Account"
+              )}
+            </button>
           </form>
         </div>
       </div>
