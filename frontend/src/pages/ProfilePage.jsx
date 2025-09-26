@@ -14,6 +14,8 @@ const ProfilePage = () => {
             <h1 className="text-2xl font-semibold">Profile</h1>
             <p className="mt-2">Your profile information</p>
           </div>
+
+          {/* avatar upload section */}
         </div>
       </div>
     </div>
