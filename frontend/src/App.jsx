@@ -23,7 +23,7 @@ const App = () => {
     return <Loader className="size-10 animate-spin" />;
 
   return (
-    <div>
+    <div data-theme="retro">
       <Navbar />
       <Routes>
         <Route
