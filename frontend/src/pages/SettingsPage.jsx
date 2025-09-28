@@ -1,3 +1,5 @@
+import { useThemeStore } from "../store/useThemeStore";
+
 const PREVIEW_MESSAGES = [
   { id: 1, content: "Hey! How's it going?", isSent: false },
   {
@@ -8,6 +10,8 @@ const PREVIEW_MESSAGES = [
 ];
 
 const SettingsPage = () => {
+  const { theme, setTheme } = useThemeStore();
+
   return <div>SettingsPage</div>;
 };
 
