@@ -1,7 +1,8 @@
 import { useChatStore } from "../store/useChatStore";
 
 const ChatContainer = () => {
-  const { messages, getMessages, isMessagesLoading } = useChatStore();
+  const { messages, getMessages, isMessagesLoading, selectedUser } =
+    useChatStore();
 
   return <div>ChatContainer</div>;
 };
