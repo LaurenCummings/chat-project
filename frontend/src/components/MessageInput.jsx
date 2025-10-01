@@ -7,6 +7,14 @@ const MessageInput = () => {
     const fileInputRef = useRef(null);
     const { sendMessage } = useChatStore();
 
+    const handleImageChange = (e) => {
+
+    };
+
+    const removeImage = () => {};
+
+    const handleSendMessage = async(e) => {};
+
   return (
     <div>MessageInput</div>
   )
