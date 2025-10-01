@@ -4,6 +4,7 @@ const ChatContainer = () => {
   const { messages, getMessages, isMessagesLoading, selectedUser } =
     useChatStore();
 
+  if (isMessagesLoading) return <div>Loading...</div>;
   return <div>ChatContainer</div>;
 };
 
