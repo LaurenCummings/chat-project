@@ -1,5 +1,6 @@
 import { useRef, useState } from "react";
 import { useChatStore } from "../store/useChatStore";
+import { X } from "lucide-react";
 
 const MessageInput = () => {
     const [text, setText] = useState("");
