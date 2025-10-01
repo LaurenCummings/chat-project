@@ -7,7 +7,7 @@ const ChatContainer = () => {
 
   useEffect(() => {
     getMessages(selectedUser._id);
-  }, []);
+  }, [selectedUser._id, getMessages]);
 
   if (isMessagesLoading) return <div>Loading...</div>;
 
