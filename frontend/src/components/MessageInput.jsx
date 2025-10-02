@@ -38,6 +38,8 @@ const MessageInput = () => {
         </div>
       )}
 
+      <form onSubmit={handleSendMessage} className="flex items-center gap-2"></form>
+
     </div>
   )
 }
