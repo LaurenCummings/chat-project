@@ -52,7 +52,7 @@ const MessageInput = () => {
             accept="image/*"
             className="hidden"
             ref={fileInputRef}
-            onChange={handleImageSelect}
+            onChange={handleImageChange}
           />
         </div>
       </form>
