@@ -37,6 +37,11 @@ const ChatContainer = () => {
                 <img src={message.senderId === authUser._id ? authUser.profilePic || "/avatar.png" : selectedUser.profilePic || "/avatar.png"} alt="profile pic" />
               </div>
             </div>
+            <div className="chat-header mb-1">
+              <time className="text-xs opacity-50 ml-1">
+                {message.createdAt}
+              </time>
+            </div>
           </div>
         ))}
       </div>
