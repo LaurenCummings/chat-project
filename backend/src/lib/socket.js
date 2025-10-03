@@ -17,6 +17,8 @@ const userSocketMap = {}; // {userId: socketId}
 io.on("connection", (socket) => {
     console.log("A user connected", socket.id);
 
+    const userId = socket.handshake.query.userId;
+
     socket.on("disconnect", () => {
         console.log("A user disconnected", socket.id);
     })
