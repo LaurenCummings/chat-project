@@ -9,6 +9,7 @@ export const useAuthStore = create((set) => ({
   isUpdatingProfile: false,
   isCheckingAuth: true,
   onlineUsers: [],
+  socket: null,
 
   checkAuth: async () => {
     try {
@@ -42,6 +43,8 @@ export const useAuthStore = create((set) => ({
       const res = await axiosInstance.post("auth/login", data);
       set({ authUser: res.data });
       toast.success("Logged in successfully");
+
+      get().connetSocket();
     } catch (error) {
       toast.error(error.response.data.message);
     } finally {
@@ -72,4 +75,6 @@ export const useAuthStore = create((set) => ({
       set({ isUpdatingProfile: false });
     }
   },
+
+  connectSocket: () => {},
 }));
