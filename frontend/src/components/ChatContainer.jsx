@@ -1,5 +1,5 @@
 import { useChatStore } from "../store/useChatStore";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import MessageSkeleton from "../components/skeletons/MessageSkeleton";
 import ChatHeader from "../components/ChatHeader";
 import MessageInput from "../components/MessageInput";
@@ -11,6 +11,7 @@ const ChatContainer = () => {
     useChatStore();
 
     const { authUser } = useAuthStore();
+    const messageEndRef = useRef(null);
 
   useEffect(() => {
     getMessages(selectedUser._id);
